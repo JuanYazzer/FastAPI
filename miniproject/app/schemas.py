@@ -1,10 +1,12 @@
 from pydantic import BaseModel
-from pyparsing import Optional
 
-class PostCreate(BaseModel):
+class Base(BaseModel):
+    pass
+
+class PostCreate(Base):
     title: str
     content: str
 
-class PostResponse(BaseModel):
+class PostResponse(Base):
     title: str
     content: str
